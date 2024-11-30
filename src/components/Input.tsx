@@ -1,17 +1,17 @@
 import React from 'react';
-import { Input, InputProps } from 'antd';
+import { Input } from 'antd';
 
 // Define the props for the reusable Input component
-interface MyInputProps extends InputProps {
+interface MyInputProps {
   label: string; // Custom label for the input
 }
 
 // Reusable Input component
-const MyInput: React.FC<MyInputProps> = ({ label, ...props }) => {
+const MyInput: React.FC<MyInputProps> = ({ label }) => {
   return (
     <div>
       <label>{label}</label>
-      <Input {...props} />
+      <Input />
     </div>
   );
 };

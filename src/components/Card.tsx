@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardProps, Button } from 'antd';
 
-interface MyCardProps extends CardProps {
+interface MyCardProps {
   title: string;
   description?: string;
   coverImageUrl?: string;
@@ -15,20 +15,14 @@ const MyCard: React.FC<MyCardProps> = ({
   description,
   coverImageUrl,
   footerContent,
-  buttonText,
-  onButtonClick,
-  children,
-  ...props
 }) => {
   return (
     <Card
       title={title}
       extra={<a href="#">More</a>}
       cover={coverImageUrl && <img alt="example" src={coverImageUrl} />}
-      {...props}
     >
       {description && <p>{description}</p>}
-      {children}
 
       {/* Optionally render footer content */}
       {footerContent && (
