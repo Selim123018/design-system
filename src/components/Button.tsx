@@ -1,16 +1,15 @@
-
 import React from 'react';
-import { Button } from 'antd';
+import { Button, ButtonProps } from 'antd';
 
-interface MyButtonProps {
+interface MyButtonProps extends ButtonProps {
   label: string;
   customClassName?: string; // Optional custom class name
   customStyle?: React.CSSProperties; // Optional inline style
 }
 
-const MyButton: React.FC<MyButtonProps> = ({ label, customClassName, customStyle }) => {
+const MyButton: React.FC<MyButtonProps> = ({ label, customClassName, customStyle, ...props }) => {
   return (
-    <Button className={customClassName} style={customStyle}>
+    <Button {...props} className={customClassName} style={customStyle}>
       {label}
     </Button>
   );

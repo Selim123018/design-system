@@ -1,6 +1,5 @@
 import React from 'react';
-import { ButtonProps } from 'antd';
-interface MyButtonProps extends ButtonProps {
+interface MyButtonProps {
     label: string;
     customClassName?: string;
     customStyle?: React.CSSProperties;

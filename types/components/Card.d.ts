@@ -1,6 +1,5 @@
 import React from 'react';
-import { CardProps } from 'antd';
-interface MyCardProps extends CardProps {
+interface MyCardProps {
     title: string;
     description?: string;
     coverImageUrl?: string;
